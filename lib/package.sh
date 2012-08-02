@@ -18,11 +18,17 @@ echo -n "Packaging for $TARGET... "
 PKGDIR=pkg/$TARGET
 LIBDIR=lib/$TARGET
 BINARY=$(cd $LIBDIR && ls love*)
+NAME=$(lua lib/get_title.lua)
+ext=."${BINARY##*.}"
+if [[ $ext == ".love" ]]; then ext=""; fi
 
 # prepare directory
 mkdir -p $PKGDIR
 
 cp $LIBDIR/* $PKGDIR
-cd $PKGDIR && cat $ROOTDIR/game.love >> "$BINARY"
+
+cd $PKGDIR
+cat $ROOTDIR/game.love >> "$BINARY"
+mv "$BINARY" $NAME$ext
 
 echo "DONE"
