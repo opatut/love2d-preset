@@ -78,3 +78,10 @@ This program is free software. It comes without any warranty, to the extent perm
 
      0. You just DO WHAT THE FUCK YOU WANT TO. 
 
+The following files and directories are not part of this project and were redistributed under their respective licenses:
+
+* data/DejaVuSans.ttf [LICENSE](http://dejavu-fonts.org/wiki/License)
+* lib/linux_x86 (license file included)
+* lib/linux_x64 (license file included)
+* lib/windows_x86 (license file included)
+* lib/windows_x64 (license file included)
