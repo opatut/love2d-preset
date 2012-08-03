@@ -43,5 +43,9 @@ function love.keypressed(k, u)
     stack:keypressed(k, u)
 end
 
+function love.mousepressed( x, y, button )
+    stack:mousepressed(x, y, button)
+end
+
 function love.quit()
 end
