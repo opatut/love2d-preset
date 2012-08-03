@@ -26,8 +26,8 @@ function GameStack:pop()
     if not self:current() then return end
     self:current():stop()
     table.remove(self.states, #self.states)
-    if self:current() then 
-        self:current():start() 
+    if self:current() then
+        self:current():start()
     else
         love.event.quit()
     end
@@ -43,4 +43,8 @@ end
 
 function GameStack:keypressed(k, u)
     if self:current() then self:current():keypressed(k, u) end
+end
+
+function GameStack:mousepressed(x, y, button)
+    if self:current() then self:current():mousepressed(x, y, button) end
 end
